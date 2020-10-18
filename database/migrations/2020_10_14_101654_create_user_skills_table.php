@@ -17,8 +17,8 @@ class CreateUserSkillsTable extends Migration
             $table->increments('id');
             $table->integer('post_id')->unsigned();
             $table->integer('skills_id')->unsigned();
-            $table->foreign('post_id')->references('id')->on('posts');
-            $table->foreign('skills_id')->references('id')->on('skills');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('Cascade');
+            $table->foreign('skills_id')->references('id')->on('skills')->onDelete('Cascade');
 
             $table->timestamps();
         });

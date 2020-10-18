@@ -24,10 +24,16 @@ Route::get('post/{id}','homeController@show');
 Route::get('province','homeController@provinces');
 Route::get('province/{id}','homeController@userprovince');
 
+
 Route::get('skills','homeController@skills');
 Route::get('skills/{id}','homeController@userskills');
+Route::post('addpost','homeController@addpost');
 
 
+
+Route::get('requestpost','adminController@getpost');
+Route::post('approve/{id}','adminController@approve');
+Route::post('addskills','adminController@addskills');
 
 
 

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillabel=[
+    protected $fillable=[
         'Full_name','age','phone','description','approve'
     ];
     protected $hidden=['created_at','updated_at','pivot'];
